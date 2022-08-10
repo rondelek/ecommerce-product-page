@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="src/css/style.css">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+</head>
+<body>
+  <main class="container">
+    <section class="main" id="main">
+
+      <nav class="navbar">
+        <section class="navbar__left navbar-column">
+          <div class="navbar__left__logo">
+            <img  src="./images/logo.svg" 
+                  alt="" 
+                  class="navbar__left__logo__img navbar__img">
+          </div>
+          <div class="navbar__left__hamburger" id="hamburger-menu">
+            <img src="./images/icon-menu.svg" alt="">
+          </div>
+          <section class="overlay-hamburger scale-in-hor-left hidden" id="overlay-hamburger">
+            <section class="navbar__left__column">
+              <div class="hamburger-el" id="hamburger-close">
+                <img src="./images/icon-close.svg" alt="">
+              </div>
+              <div class="hamburger-el">Collections</div>
+              <div class="hamburger-el">Men</div>
+              <div class="hamburger-el">Women</div>
+              <div class="hamburger-el">About</div>
+              <div class="hamburger-el">Contact</div>
+            </section>
+          </section>
+          <section class="navbar__left__items hidden">
+            <div class="navbar__left__items__elem">Collections</div>
+            <div class="navbar__left__items__elem">Men</div>
+            <div class="navbar__left__items__elem">Women</div>
+            <div class="navbar__left__items__elem">About</div>
+            <div class="navbar__left__items__elem">Contact</div>
+          </section>
+            
+        </section>
+
+        <section class="navbar__right">
+
+          <!-- cart items -->
+
+          <div class="navbar__right__cart">
+            <img  src="./images/icon-cart.svg" 
+                  alt="" 
+                  class="navbar__right__cart__img navbar__img"
+                  id="cart">
+            <div class="items hidden" id="items">
+              <p>0</p> 
+            </div>
+
+          </div>
+          <div class="navbar__right__avatar">
+            <img  src="./images/image-avatar.png" 
+                  alt="" 
+                  class="navbar__right__avatar__img navbar__img"
+                  id="avatar">
+          </div>
+        </section>
+      </nav>
+
+      <section class="product">
+
+        <!-- photos -->
+        <section class="product__photos">
+          <section class="product__photos__big">
+            <div class="product__photos__big__photo">
+              <img src="./images/image-product-1.jpg" alt="" class="big-photo" id="big-photo">
+            </div>
+          </section>
+  
+          <section class="product__photos__small">
+            <div class="product__photos__small__photo">
+              <img src="./images/image-product-1.jpg" alt="" class="photo">
+            </div>
+            <div class="product__photos__small__photo">
+              <img src="./images/image-product-2.jpg" alt="" class="photo">
+            </div>
+            <div class="product__photos__small__photo">
+              <img src="./images/image-product-3.jpg" alt="" class="photo">
+            </div>
+            <div class="product__photos__small__photo">
+              <img src="./images/image-product-4.jpg" alt="" class="photo">
+            </div>
+  
+          </section>
+        </section>
+        
+        <!-- main -->
+
+        <section class="product__txt">
+          <h2 class="product__txt__company">SNEAKER COMPANY</h2> 
+      
+          <h1 class="product__txt__title" id="title">Fall Limited Edition Sneakers</h1> 
+        
+          <p class="product__txt__text">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+            durable rubber outer sole, they’ll withstand everything the weather can offer.</p> 
+          
+          <div class="product__txt__price">
+            <div class="product__txt__price__dollar">$ <a id="price">125.00</a></div> 
+            <div class="product__txt__price__percent">50%</div> 
+          </div>
+          <div class="product__txt__crossed">
+            $250.00
+          </div> 
+
+          <div class="product__txt__cart">
+            <div class="product__txt__cart__counter">
+              <span class="count orange" id="minus">-</span><span class="number" id="number">1</span><span class="count orange" id="plus">+</span>
+            </div> 
+            <button id="button-add">
+              <span class="button__cart">
+                <img  src="./images/icon-cart-white.svg" 
+                      alt="" 
+                      class="button__cart__img">
+              </span>
+              <span class="add">Add to cart</span>
+            </button> 
+          </div>
+        
+
+        </section>
+
+        
+      </section>
+
+      <!-- cart nav -->
+
+      <section class="cart hidden" id="cart-content"> 
+        <h2 class="cart__title">Cart</h2>
+        <div class="cart__content">
+          <div class="cart__content__empty" id="empty">
+            <p class="empty__txt">Your cart is empty.</p>
+          </div>
+
+          <div class="cart__content__full hidden" id="full">
+            <div class="full">
+              <div class="full__product">
+                <img  src="./images/image-product-1-thumbnail.jpg" 
+                      alt="" 
+                      class="full__product__img">
+              </div>
+              <div class="full__txt">
+                <div class="full__txt__title" id="cart-title"></div>
+                <div class="full__txt__price">
+                  <span class="price" id="cart-price"></span><span class="total" id="total"></span>
+                </div>
+              </div>
+              <div class="full__delete" id="delete">
+                <img  src="./images/icon-delete.svg" 
+                      alt="" 
+                      class="full__delete__img">
+              </div>
+            </div>
+            <button class="checkout">Checkout</button>
+          </div>
+        </div>
+      </section>
+      
+    </section>
+
+    <!-- overlay -->
+
+    <section class="overlay hidden" id="overlay">
+      <section class="product__photos photos-overlay">
+        <div class="product__photos__x" id="x"></div>
+        <section class="product__photos__big">
+          <div class="arrow left" id="left-arrow">
+            <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>          
+          </div>
+          <div class="arrow right" id="right-arrow">
+            <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="product__photos__big__photo">
+            <img src="./images/image-product-1.jpg" alt="" class="big-photo-lightbox" id="big-photo-lightbox">
+          </div>
+        </section>
+
+        <section class="product__photos__small photos">
+          <div class="product__photos__small__photo">
+            <img src="./images/image-product-1.jpg" alt="" class="photo-lightbox">
+          </div>
+          <div class="product__photos__small__photo">
+            <img src="./images/image-product-2.jpg" alt="" class="photo-lightbox">
+          </div>
+          <div class="product__photos__small__photo">
+            <img src="./images/image-product-3.jpg" alt="" class="photo-lightbox">
+          </div>
+          <div class="product__photos__small__photo">
+            <img src="./images/image-product-4.jpg" alt="" class="photo-lightbox">
+          </div>
+
+        </section>
+      </section>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
